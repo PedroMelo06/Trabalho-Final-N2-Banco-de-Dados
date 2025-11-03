@@ -4,10 +4,6 @@
  */
 package ucb.estudo.dao;
 
-/**
- *
- * @author pedro
- */
 public class ConexaoMySQL {
     
 }

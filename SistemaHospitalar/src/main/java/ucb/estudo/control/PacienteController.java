@@ -4,10 +4,6 @@
  */
 package ucb.estudo.control;
 
-/**
- *
- * @author paulo
- */
 public class PacienteController {
     
 }
