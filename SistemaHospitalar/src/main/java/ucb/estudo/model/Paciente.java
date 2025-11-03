@@ -15,18 +15,18 @@ public class Paciente extends Pessoa {
         super(); 
     }
       
-    public Paciente(String nome, String cpf, LocalDate dataNascimento, String telefone, String email, String cidade, int numero, String rua) {
-        super(nome, cpf, dataNascimento, telefone, email, cidade, numero, rua);
+    public Paciente(String nome, String cpf, LocalDate dataNascimento, String telefone, String email, Endereco endereco) {
+        super(nome, cpf, dataNascimento, telefone, email, endereco);
     }
     
-    public Paciente(String nome, String cpf, LocalDate dataNascimento, String telefone, String email, String cidade, int numero, String rua, String convenio, String prioridade) {
-        this(nome, cpf, dataNascimento, telefone, email, cidade, numero, rua);
+    public Paciente(String nome, String cpf, LocalDate dataNascimento, String telefone, String email, Endereco endereco, String convenio, String prioridade) {
+        this(nome, cpf, dataNascimento, telefone, email, endereco);
         this.convenio = convenio;
         this.prioridade = prioridade;
     }
 
-    public Paciente(int idPaciente, String nome, String cpf, LocalDate dataNascimento, String telefone, String email, String cidade, int numero, String rua, String convenio, String prioridade) {
-        this(nome, cpf, dataNascimento, telefone, email, cidade, numero, rua, convenio, prioridade);
+    public Paciente(int idPaciente, String nome, String cpf, LocalDate dataNascimento, String telefone, String email, Endereco endereco, String convenio, String prioridade) {
+        this(nome, cpf, dataNascimento, telefone, email, endereco, convenio, prioridade);
         this.idPaciente = idPaciente;
     }
 

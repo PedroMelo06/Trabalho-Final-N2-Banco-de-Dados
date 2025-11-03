@@ -15,18 +15,18 @@ public class Medico extends Pessoa {
         super();
     }
     
-    public Medico(String nome, String cpf, LocalDate dataNascimento, String telefone, String email, String cidade, int numero, String rua) {
-        super(nome, cpf, dataNascimento, telefone, email, cidade, numero, rua);
+    public Medico(String nome, String cpf, LocalDate dataNascimento, String telefone, String email, Endereco endereco) {
+        super(nome, cpf, dataNascimento, telefone, email, endereco);
     }
     
-    public Medico(String nome, String cpf, LocalDate dataNascimento, String telefone, String email, String cidade, int numero, String rua, String especializacao, String disponibilidade) {
-        this(nome, cpf, dataNascimento, telefone, email, cidade, numero, rua);
+    public Medico(String nome, String cpf, LocalDate dataNascimento, String telefone, String email, Endereco endereco, String especializacao, String disponibilidade) {
+        this(nome, cpf, dataNascimento, telefone, email, endereco);
         this.especializacao = especializacao;
         this.disponibilidade = disponibilidade;
     }
     
-    public Medico(int idMedico, String nome, String cpf, LocalDate dataNascimento, String telefone, String email, String cidade, int numero, String rua, String especializacao, String disponibilidade) {
-        this(nome, cpf, dataNascimento, telefone, email, cidade, numero, rua, especializacao, disponibilidade);
+    public Medico(int idMedico, String nome, String cpf, LocalDate dataNascimento, String telefone, String email, Endereco endereco, String especializacao, String disponibilidade) {
+        this(nome, cpf, dataNascimento, telefone, email, endereco, especializacao, disponibilidade);
         this.idMedico = idMedico;
     }
 

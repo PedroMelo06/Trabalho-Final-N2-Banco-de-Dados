@@ -12,9 +12,7 @@ public class Pessoa {
     private LocalDate dataNascimento;
     private String telefone;
     private String email;
-    private String cidade;
-    private int numero;
-    private String rua;
+    private Endereco endereco;
     
     public Pessoa() {
     }
@@ -40,11 +38,9 @@ public class Pessoa {
         this.email = email;
     }
 
-    public Pessoa(String nome, String cpf, LocalDate dataNascimento, String telefone, String email, String cidade, int numero, String rua) {
+    public Pessoa(String nome, String cpf, LocalDate dataNascimento, String telefone, String email, Endereco endereco) {
         this(nome, cpf, dataNascimento, telefone, email);
-        this.cidade = cidade;
-        this.numero = numero;
-        this.rua = rua;
+        this.endereco = endereco;
     }
 
     public String getCpf() {
@@ -87,27 +83,12 @@ public class Pessoa {
         this.email = email;
     }
 
-    public String getCidade() {
-        return cidade;
+    public Endereco getEndereco() {
+        return endereco;
     }
 
-    public void setCidade(String cidade) {
-        this.cidade = cidade;
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
     }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public void setNumero(int numero) {
-        this.numero = numero;
-    }
-
-    public String getRua() {
-        return rua;
-    }
-
-    public void setRua(String rua) {
-        this.rua = rua;
-    }
+    
 }
