@@ -4,10 +4,7 @@
 
 package ucb.estudo.view;
 
-/**
- *
- * @author pedro
- */
+
 public class SistemaHospitalar {
 
     public static void main(String[] args) {
