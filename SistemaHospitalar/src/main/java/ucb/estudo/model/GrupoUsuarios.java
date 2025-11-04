@@ -1,8 +1,19 @@
 package ucb.estudo.model;
 
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = "grupos_usuarios")
 public class GrupoUsuarios {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_grupo")
     private String idGrupo;
+    
+    @Column(name = "nome_grupo", unique = true, nullable = false)
     private String nomeGrupo;
+    
+    private String descricao;
 
     public GrupoUsuarios() {
     }
@@ -26,6 +37,14 @@ public class GrupoUsuarios {
     
     public void setNomeGrupo(String nomeGrupo) { 
         this.nomeGrupo = nomeGrupo;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+    
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
 }

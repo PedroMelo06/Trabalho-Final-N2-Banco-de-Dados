@@ -4,27 +4,43 @@
  */
 package ucb.estudo.model;
 
-public class Usuario {
-    private int idUsuario;
-    private String username;
-    private String senhaHash;
-    private String pessoaCpf;
-    private int idGrupo;
+import jakarta.persistence.*;
 
+@Entity
+@Table(name = "usuarios")
+public class Usuario {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id_usuario")
+    private int idUsuario;
+    
+    @Column(unique = true, nullable = false)
+    private String username;
+    
+    @Column(name = "senha_hash", nullable = false)
+    private String senhaHash;
+    
+    @Column(name = "pessoa_CPF", unique = true)
+    private String pessoaCpf;
+    
+    @ManyToOne(fetch = FetchType.EAGER) 
+    @JoinColumn(name = "id_grupo") 
+    private GrupoUsuarios grupo;
+    
     public Usuario() {
     }
 
     public Usuario(String username, String senhaHash, int idGrupo) {
         this.username = username;
         this.senhaHash = senhaHash;
-        this.idGrupo = idGrupo;
+        this.grupo = grupo;
     }
     
     public Usuario(String username, String senhaHash, String pessoaCpf, int idGrupo) {
         this.username = username;
         this.senhaHash = senhaHash;
         this.pessoaCpf = pessoaCpf;
-        this.idGrupo = idGrupo;
+        this.grupo = grupo;
     }
 
     public int getIdUsuario() {
@@ -59,12 +75,12 @@ public class Usuario {
         this.pessoaCpf = pessoaCpf;
     }
 
-    public int getIdGrupo() {
-        return idGrupo;
+    public GrupoUsuarios getGrupo() {
+        return grupo;
     }
 
-    public void setIdGrupo(int idGrupo) {
-        this.idGrupo = idGrupo;
+    public void setGrupo(GrupoUsuarios grupo) {
+        this.grupo = grupo;
     }
-    
+   
 }
