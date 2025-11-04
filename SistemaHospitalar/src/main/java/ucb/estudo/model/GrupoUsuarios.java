@@ -1,13 +1,13 @@
 package ucb.estudo.model;
 
-public class GrupoUsuario {
+public class GrupoUsuarios {
     private String idGrupo;
     private String nomeGrupo;
 
-    public GrupoUsuario() {
+    public GrupoUsuarios() {
     }
 
-    public GrupoUsuario(String idGrupo, String nomeGrupo) {
+    public GrupoUsuarios(String idGrupo, String nomeGrupo) {
         this.idGrupo = idGrupo;
         this.nomeGrupo = nomeGrupo;
     }
