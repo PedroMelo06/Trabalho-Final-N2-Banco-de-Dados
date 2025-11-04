@@ -3,7 +3,6 @@ package ucb.estudo.model;
 import java.time.LocalDate;
 
 public class Internacao {
-    
     private String idInternacao;
     private String idQuarto;
     private String idPaciente;

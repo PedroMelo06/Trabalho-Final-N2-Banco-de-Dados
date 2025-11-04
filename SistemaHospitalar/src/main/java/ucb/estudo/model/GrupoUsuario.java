@@ -1,7 +1,6 @@
 package ucb.estudo.model;
 
 public class GrupoUsuario {
-    
     private String idGrupo;
     private String nomeGrupo;
 

@@ -8,7 +8,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class Consulta {
-     private String idConsulta;
+    private String idConsulta;
     private String idMedico;
     private String idPaciente;
     private LocalDate dataConsulta;
